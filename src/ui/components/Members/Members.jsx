@@ -64,7 +64,7 @@ const Members = () => {
     });
   }, []);
   return (
-    <div className="px-4 mt-24 mb-24 font-main">
+    <div className="px-4 mt-24 mb-24 font-main" id="members">
       <Container>
         <h2 className="text-center mb-10 font-bold text-5xl uppercase">
           About us

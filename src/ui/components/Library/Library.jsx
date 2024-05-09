@@ -65,7 +65,7 @@ const Library = () => {
     });
   }, []);
   return (
-    <LibraryWrapper id="#library">
+    <LibraryWrapper id="library">
       <Container>
         <Row ref={firstRowRef}>
           <Col mr={isTablet ? "7.8vw" : "130px"}>

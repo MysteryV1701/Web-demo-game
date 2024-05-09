@@ -24,7 +24,7 @@ const Header = ({ solid, color }) => {
               ["Thư viện", "#library"],
               ["Chúng tôi", "#members"],
             ].map(([title, url]) => (
-              <Link to={url}>
+              <a href={url}>
                 <div
                   className={`font-main text-2xl cursor-pointer inline-flex font-semibold ${
                     color ? color : "text-gray-900"
@@ -32,7 +32,7 @@ const Header = ({ solid, color }) => {
                 >
                   {title}
                 </div>
-              </Link>
+              </a>
             ))}
           </nav>
         </div>

@@ -59,19 +59,72 @@ const GroundGrid = ({ col, row, season, className }) => {
               ))}
             </div>
           ))
-        : groundArray.map((_, index) => (
-            <div key={index} className="">
-              <img
-                className="w-20 h-auto object-cover"
-                src={
-                  index === 0 // Check for first element (index === 0)
-                    ? dirtLeft
-                    : index === groundArray.length - 1 // Check for last element
-                    ? dirtRight
-                    : dirtMid
-                }
-                alt="Ground"
-              />
+        : season === "summer"
+        ? groundArray.map((rowData, rowIndex) => (
+            <div key={rowIndex} className="flex">
+              {rowData.map((_, colIndex) => (
+                <div key={`${rowIndex}-${colIndex}`} className="flex">
+                  <img
+                    className="w-20 h-auto object-cover"
+                    src={
+                      // Logic for choosing image based on position
+                      rowIndex === 0
+                        ? colIndex === 0
+                          ? GroundSummerLeft
+                          : colIndex === col - 1
+                          ? GroundSummerRight
+                          : GroundSummerMid
+                        : GroundSummerCenter
+                    }
+                    alt="Ground"
+                  />
+                </div>
+              ))}
+            </div>
+          ))
+        : season === "fall"
+        ? groundArray.map((rowData, rowIndex) => (
+            <div key={rowIndex} className="flex">
+              {rowData.map((_, colIndex) => (
+                <div key={`${rowIndex}-${colIndex}`} className="flex">
+                  <img
+                    className="w-20 h-auto object-cover"
+                    src={
+                      // Logic for choosing image based on position
+                      rowIndex === 0
+                        ? colIndex === 0
+                          ? GroundFallLeft
+                          : colIndex === col - 1
+                          ? GroundFallRight
+                          : GroundFallMid
+                        : GroundFallCenter
+                    }
+                    alt="Ground"
+                  />
+                </div>
+              ))}
+            </div>
+          ))
+        : groundArray.map((rowData, rowIndex) => (
+            <div key={rowIndex} className="flex">
+              {rowData.map((_, colIndex) => (
+                <div key={`${rowIndex}-${colIndex}`} className="flex">
+                  <img
+                    className="w-20 h-auto object-cover"
+                    src={
+                      // Logic for choosing image based on position
+                      rowIndex === 0
+                        ? colIndex === 0
+                          ? GroundWinterLeft
+                          : colIndex === col - 1
+                          ? GroundWinterRight
+                          : GroundWinterMid
+                        : GroundWinterCenter
+                    }
+                    alt="Ground"
+                  />
+                </div>
+              ))}
             </div>
           ))}
     </div>
