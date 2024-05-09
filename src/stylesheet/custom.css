@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+@import url("./animation.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "VT323", monospace;
+  font-style: normal;
+  letter-spacing: 1px;
+  word-spacing: -4px;
+}
+
+&::-webkit-scrollbar {
+  width: 0px;
+}
+
+.bg-linear-light {
+  background-image: linear-gradient(to top, #8bdef7, #a2d5e4);
+}
+
+.cloud {
+  animation: cloud 26s infinite linear, transitionXUp 5s;
+  animation-fill-mode: none;
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+.delay-2 {
+  animation-delay: 2s;
+}
+.delay-3 {
+  animation-delay: 3s;
+}
+.delay-4 {
+  animation-delay: 4s;
+}
+.delay-6 {
+  animation-delay: 6s;
+}
+.delay-8 {
+  animation-delay: 8s;
+}
+.delay-10 {
+  animation-delay: 10s;
+}
+.delay-12 {
+  animation-delay: 12s;
+}
+.delay-14 {
+  animation-delay: 14s;
+}
+.delay-16 {
+  animation-delay: 16s;
+}
+.delay-18 {
+  animation-delay: 18s;
+}
+.delay-20 {
+  animation-delay: 20s;
+}
+.delay-22 {
+  animation-delay: 22s;
+}
+.delay-24 {
+  animation-delay: 24s;
+}
